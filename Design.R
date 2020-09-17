@@ -5,8 +5,6 @@ impute <- function(D, FUN = median){
 }
 
 
-data <- read.csv("https://raw.githubusercontent.com/rnorouzian/d/master/alpha.csv")
-
 mean_split_halves <- function(data){
   
 rxx <- combn(seq_along(data), ncol(data)/2, function(x) cor(rowSums(data[,x]), rowSums(data[,-x])))
@@ -39,5 +37,3 @@ ci_alpha <- 1-exp(2*ci_alpha_trans)
 
 round(data.frame(alpha = alpha, lower = ci_alpha[1], upper = ci_alpha[2]), digits = digits)
 }
-
-cronbach(data, digits = 3, impute = T)
