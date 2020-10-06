@@ -52,3 +52,17 @@ prop_sample <- prop_str_sample(apipop, "stype", n = 25)
 Prop1
 
 
+
+#-------Multi-dimensional Strata Sampling in R ----------------------------------------------------------------------------------------------------
+
+
+sf <- read.csv('https://raw.githubusercontent.com/rnorouzian/d/master/su.csv')
+
+out <- prop_str_sample(sf, c("gender", "pre"), n=200)
+
+
+prop.table(table(sf[c("gender", "pre")])) # multi-dimensional strata in frame
+
+
+prop.table(table(out[c("gender", "pre")])) # multi-dimensional strata in sample
+
