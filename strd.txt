@@ -46,11 +46,9 @@ prop_sample <- prop_str_sample(apipop, "stype", n = 25)
 # turn tab3 into proportions
 (prop3 <- prop.table(tab3))
 
-  E    H    M 
-0.72 0.12 0.16
+
 
 # compare to frame proportions
 Prop1
 
-     E         H         M 
-0.7137552 0.1218922 0.1643526 
+
