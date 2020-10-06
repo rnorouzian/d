@@ -6,6 +6,9 @@ library(tidyverse)
 library(survey)
 library(sampling)
 
+data(api)
+
+
 prop_str_sample <- function(sample_frame, vars = NULL, n = 10, seed = NULL){
   
   if(!inherits(sample_frame, c("data.frame", "tibble"))) stop("sample_frame must be a 'data.frame'.", call. = FALSE)   
