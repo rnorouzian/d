@@ -1,0 +1,56 @@
+
+
+#-------Student performance in California schools-----------
+
+
+source('https://raw.githubusercontent.com/rnorouzian/d/master/st.R')
+
+# frame size  
+dim(apipop) 
+
+# take a look at 3 rows
+head(apipop, n = 3)     ## api = Academic Performance Index computed for students in CA
+
+# take a look at the type of schools
+unique(apipop$stype)
+
+# see how many of each school the frame has
+(tab1 <- table(apipop["stype"]))
+
+# turn tab into proportions
+(prop1 <- prop.table(tab1))
+
+# Now, pick equal number of each school type
+s <- strata(apipop,"stype",size=c(10,10,10),method = "srswor")
+
+# extracts the sampled data
+getdata(apipop,s)
+
+# see how many of each school the sample has
+(tab2 <- table(s["stype"]))
+
+# turn tab2 into proportions
+(prop2 <-prop.table(tab2)) ### The proportions in your sample not similar to that in frame!
+
+
+
+#--------------Proportional to population size of stratum-----------------------------------------------------------------------------
+
+
+### Sample proportional to frame:
+prop_sample <- prop_str_sample(apipop, "stype", n = 25)
+
+# see how many of each school the sample has
+(tab3 <- table(prop_sample$data["stype"]))
+
+# turn tab3 into proportions
+(prop3 <- prop.table(tab3))
+
+  E    H    M 
+0.72 0.12 0.16
+
+# compare to frame proportions
+Prop1
+
+     E         H         M 
+0.7137552 0.1218922 0.1643526 
