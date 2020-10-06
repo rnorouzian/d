@@ -36,7 +36,7 @@ prop_str_sample <- function(sample_frame, vars = NULL, n = 10, seed = NULL){
     right_join(DF)
   
 DF <- left_join(DATA1, DF, by = vars) %>%  
-    mutate(fpc = coalesce(fpc.y, fpc.x)) %>% select(names(DF))  ## Error: Can't subset columns that don't exist. @@@@@@@@@@@@@@@@@@@@@
+    mutate(fpc = coalesce(fpc.y, fpc.x))  ## Error: Can't subset columns that don't exist. @@@@@@@@@@@@@@@@@@@@@
                                                                 ## x Columns `n`, `fake.name`, `sector`, `pretest`, `state`, etc. don't exist. @@@@@@@
   
   return(list(frame_strata_freq = addmargins(f_freq), frame_strata_prop = round(addmargins(prop.table(f_freq)),3), sample_strata_prop = round(addmargins(prop.table(s_freq)),3), sample_strata_freq=addmargins(s_freq), data = DF))
