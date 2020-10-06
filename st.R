@@ -35,7 +35,7 @@ prop_str_sample <- function(sample_frame, vars = NULL, n = 10, seed = NULL){
     mutate(fpc = n/sum(n)) %>% 
     right_join(DF) %>% arrange(across(all_of(vars)))
   
-  DF$fpc <- DATA1$fpc
+  DF$fpc <- DATA1$fpc          ##############@@@@@@@@@@@@@@  HERE is the ERROR ?????
   
   return(list(frame_strata_freq = addmargins(f_freq), frame_strata_prop = round(addmargins(prop.table(f_freq)),3), sample_strata_prop = round(addmargins(prop.table(s_freq)),3), sample_strata_freq=addmargins(s_freq), data = DF))
 }
