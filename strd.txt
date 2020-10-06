@@ -64,5 +64,5 @@ out <- prop_str_sample(sf, c("gender", "pre"), n=200)
 prop.table(table(sf[c("gender", "pre")])) # multi-dimensional strata in frame
 
 
-prop.table(table(out[c("gender", "pre")])) # multi-dimensional strata in sample
+prop.table(table(out$data[c("gender", "pre")])) # multi-dimensional strata in sample
 
