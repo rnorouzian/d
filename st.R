@@ -8,8 +8,8 @@ library(sampling)
 
 prop_str_sample <- function(sample_frame, vars = NULL, n = 10, seed = NULL){
   
-  if(!inherits(sample_frame, c("data.frame", "tibble", "matrix"))) stop("sample_frame must be a data.frame.", call. = FALSE)   
-  if(is.null(vars)) vars <- names(sample_frame)
+  if(!inherits(sample_frame, c("data.frame", "tibble"))) stop("sample_frame must be a 'data.frame'.", call. = FALSE)   
+  if(is.null(vars)) vars <- names(sample_frame)[sapply(sample_frame, is.character)]
   
   DATA1 <- sample_frame %>%
     group_by(across(all_of(vars))) %>%
