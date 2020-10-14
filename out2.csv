@@ -1,0 +1,11 @@
+cds,stype,name,sname,snum,dname,dnum,cname,cnum,flag,pcttest,api00,api99,target,growth,sch.wide,comp.imp,both,awards,meals,ell,yr.rnd,mobility,acs.k3,acs.46,acs.core,pct.resp,not.hsg,hsg,some.col,col.grad,grad.sch,avg.ed,full,emer,enroll,api.stu
+14632486008692,E,Big Pine Elemen,Big Pine Elementary,859,Big Pine Unified,64,Inyo,13,NA,98,667,607,10,60,Yes,Yes,Yes,Yes,41,7,NA,11,17,20,19,66,2,22,38,32,5,3.1600000858306885,92,0,153,123
+15637506096127,E,Rosedale-North ,Rosedale-North Elementary,1001,Rosedale Elementary,611,Kern,14,NA,100,713,671,6,42,Yes,Yes,Yes,Yes,25,0,NA,16,17,17,NA,89,7,51,12,22,7,2.7100000381469727,97,3,419,354
+16639336010466,E,Island Elementa,Island Elementary,1056,Island Union Elementary,317,Kings,15,NA,100,734,684,6,50,Yes,Yes,Yes,Yes,43,11,NA,13,18,28,NA,97,19,35,21,15,9,2.5899999141693115,100,0,192,165
+19648326020812,E,Wiley Canyon El,Wiley Canyon Elementary,2151,Newhall Elementary,489,Los Angeles,18,NA,100,805,777,1,28,Yes,Yes,Yes,Yes,33,18,No,14,18,27,NA,99,22,34,17,23,4,2.549999952316284,80,20,607,549
+23655816025167,E,Mendocino Eleme,Mendocino Elementary,2638,Mendocino Unified,436,Mendocino,22,NA,97,859,774,1,85,Yes,Yes,Yes,Yes,25,0,NA,16,16,21,NA,90,1,18,29,25,26,3.559999942779541,100,0,166,134
+31750856031207,E,Parker Whitney ,Parker Whitney Elementary,3329,Rocklin Unified,608,Placer,30,NA,98,827,814,NA,13,Yes,Yes,Yes,Yes,16,1,NA,19,18,28,NA,95,1,9,29,39,21,3.700000047683716,100,0,532,442
+36677106035901,E,South Tamarind ,South Tamarind Elementary,4012,Fontana Unified,238,San Bernardino,35,NA,100,505,512,14,-7,No,No,No,No,74,38,No,22,19,29,NA,8,39,37,17,2,4,1.9600000381469727,72,19,569,491
+41690216044747,M,Central Middle,Central Middle,5042,San Carlos Elementary,629,San Mateo,40,NA,99,822,800,NA,22,Yes,Yes,Yes,Yes,1,1,NA,6,NA,29,26,95,1,14,6,48,31,3.940000057220459,92,5,741,656
+51713995135256,H,Live Oak High,Live Oak High,5821,Live Oak Unified,387,Sutter,50,NA,100,598,577,11,21,Yes,No,No,No,66,18,NA,3,NA,NA,27,96,50,20,24,3,3,1.8700000047683716,100,0,353,303
+57726785732201,H,Davis Senior Hi,Davis Senior High,6141,Davis Joint Unified,172,Yolo,56,NA,93,855,812,NA,43,Yes,Yes,Yes,Yes,4,7,NA,9,NA,NA,29,91,3,4,7,29,56,4.309999942779541,98,6,1081,909
