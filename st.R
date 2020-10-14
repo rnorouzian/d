@@ -31,8 +31,8 @@ s_freq <- table(DF[vars])
 
 fpc <- s_freq/f_freq
 
-DF <- merge(DF, as.data.frame(fpc), all.x = TRUE)
-names(DF)[names(DF) == "Freq"] <- "fpc"
+#DF <- merge(DF, as.data.frame(fpc), all.x = TRUE)
+#names(DF)[names(DF) == "Freq"] <- "fpc"
 
 return(list(frame_strata_freq = addmargins(f_freq), frame_strata_prop = round(addmargins(prop.table(f_freq)),3), sample_strata_prop = round(addmargins(prop.table(s_freq)),3), sample_strata_freq=addmargins(s_freq), fpc = fpc, data = DF))
 }
