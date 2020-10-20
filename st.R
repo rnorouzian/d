@@ -2,9 +2,11 @@ need <- c("tidyverse", "survey", "sampling")
 not.have <- need[!(need %in% installed.packages()[,"Package"])]
 if(length(not.have)) install.packages(not.have)
 
+suppressMessages({ 
 library(tidyverse)
 library(survey)
 library(sampling)
+})  
 
 data(api)
 
