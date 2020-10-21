@@ -5,10 +5,10 @@ streat = 10 ,
 ccon = 100 ,
 scon = 10 ,
 iccmax = 0.1 ,
-Vmax = 2,
+Vmax = 2,                      ## How can a user know what to input for 'Vmax' & 'mean_dif'?
 SDratiomax = 1 ,
 SDratiomin = 1/SDratiomax,
-mean_dif = 0.5,
+mean_dif = 0.5,               ## I changed beta_1 to 'mean_dif'
 power = 80)
 {
 
@@ -18,7 +18,7 @@ power = 80)
 ESmin <- mean_dif/sqrt(Vmax/2)
 zbeta <- qnorm((power/100),mean = 0, sd =1)
 zalpha <- qnorm(1-(alpha/(100*tail)),mean = 0, sd =1)
-maxvarmean_difhat <- (mean_dif / (zbeta + zalpha))**2
+maxvarmean_difhat <- (mean_dif / (zbeta + zalpha))**2   # 'mean_dif' is also used here
 
 
 ntreat <- sqrt((ctreat/streat)*((1-iccmax)/iccmax))
@@ -36,7 +36,7 @@ fraction <- budgetratio/(1 + budgetratio)
 
 mmvnumer <- 99999
 mmvnumer <- ifelse( ((pratio <= SDratiomax) & (pratio >= SDratiomin)),
-                    gcon*Vmax*(1+(pratio**2)), 
+                    gcon*Vmax*(1+(pratio**2)),                                #Varmax is used here as well
                     ifelse((pratio > SDratiomax),
                            gcon*Vmax*(((pratio*SDratiomax)+1)**2/((SDratiomax**2)+1)),
                            gcon*Vmax*(((pratio*SDratiomin)+1)**2/((SDratiomin**2) + 1))   ) )
@@ -75,4 +75,5 @@ message("
 data.frame(SE_effect = sqrt(maxvarmean_difhat),ncon, ntreat, ktreat = ktreatplus,kcon=kconplus,budget=paste0("$",round(budgetplus, 2)), row.names = "STUDY:")
 }
 
-cost_crt(iccmax = .2, power = 80, Vmax = 3)
+# EXAMPLE OF USE:
+#cost_crt(iccmax = .2, power = 80, Vmax = 3)
