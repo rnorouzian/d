@@ -77,6 +77,7 @@ inv_d <- function(mdes) {
     kcont: # of control clusters
    budget: total budget needed\n")
   
-  data.frame(mdes = mdes, ncont = ceiling(ncont), ntreat = ceiling(ntreat), ktreat = ktreatplus, kcont = kcontplus, budget = paste0("$", round(budgetplus, 2)), 
-             power = paste0(power, "%"), row.names = "STUDY:")
+  data.frame(mdes = mdes, ncont = ncont <- ceiling(ncont), kcont = kcont <- kcontplus, 
+             ntreat = ntreat <- ceiling(ntreat), ktreat = ktreat <- ktreatplus, budget = paste0("$", round(budgetplus, 2)), 
+             power = paste0(power, "%"), total_N = ncont*kcont+ntreat*ktreat, row.names = "STUDY:")
 }
