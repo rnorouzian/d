@@ -26,9 +26,6 @@ inv_d <- function(mdes) {
   maxvarmean_difhat <- (mean_dif / (zbeta + zalpha))**2  
   
   
-  qnorm(1-(5/(100*1)),mean = 0, sd =1)
-  
-  
   ntreat <- sqrt((cost_per_c_treat/cost_per_s_treat)*((1-iccmax)/iccmax))
   ncont <- sqrt((cost_per_c_cont/cost_per_s_cont)*((1-iccmax)/iccmax))
   costpertreatcluster <- cost_per_c_treat + (cost_per_s_treat*ntreat)
