@@ -41,7 +41,7 @@ inv_d <- function(mdes) {
   
   mmvnumer <- 99999
   mmvnumer <- ifelse( ((pratio <= SDtreat_to_cont) & (pratio >= SDratiomin)),
-                      gcon*Vmax*(1+(pratio**2)),                                #Varmax is used here as well
+                      gcon*Vmax*(1+(pratio**2)),                                
                       ifelse((pratio > SDtreat_to_cont),
                              gcon*Vmax*(((pratio*SDtreat_to_cont)+1)**2/((SDtreat_to_cont**2)+1)),
                              gcon*Vmax*(((pratio*SDratiomin)+1)**2/((SDratiomin**2) + 1))   ) )
