@@ -1,4 +1,4 @@
-need <- c("tidyverse", "survey", "sampling")
+need <- c("tidyverse", "survey", "sampling", "randomizr")
 not.have <- need[!(need %in% installed.packages()[,"Package"])]
 if(length(not.have)) install.packages(not.have)
 
