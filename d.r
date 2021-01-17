@@ -14,3 +14,5 @@ suppressWarnings(
 source('https://raw.githubusercontent.com/rnorouzian/d/master/Design.R')
 
 source('https://raw.githubusercontent.com/rnorouzian/d/master/cost_power.R')
+
+source('https://raw.githubusercontent.com/rnorouzian/d/master/st.R')
