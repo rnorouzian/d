@@ -17,7 +17,7 @@ prop_str_sample <- function(sample_frame, vars = NULL, n = 10, seed = NULL){
   if(is.null(vars)) vars <- vars2
   if(length(vars) == 0) stop("No variable name was found for stratification.", call. = FALSE)
   ok_names <- vars %in% vars2
-  if(!all(ok_names)) stop(paste(toString(vars[!ok_names]), "not found in the 'sample_frame'."), call. = FALSE)
+  #if(!all(ok_names)) stop(paste(toString(vars[!ok_names]), "not found in the 'sample_frame'."), call. = FALSE)
   
   set.seed(seed)
   rpss <- function(stratum, n) {
