@@ -1,4 +1,4 @@
-needxzc <- c("tidyverse", "survey", "sampling", "randomizr", "psych", "RBtest", "mice", "BiocManager", "DAKS")
+needxzc <- c("tidyverse", "survey", "sampling", "randomizr", "psych", "RBtest", "mice", "BiocManager", "DAKS","RBtest")
 not.have <- needxzc[!(needxzc %in% installed.packages()[,"Package"])]
 if(length(not.have)) install.packages(not.have)
 
@@ -49,3 +49,17 @@ my.penalty <- function(dayslate = 0, dayslate.span = 30){
   points(x, y, bg = 'cyan', col = 'magenta', pch = 21, cex = 1.5)
   text(x, y, y, cex = .75, font = 2, pos = 3, xpd = NA, col = ifelse(dayslate != 0, 2, 1))
 }        
+
+
+#================================================================================================================================
+
+
+mar_mcar <- function(data){
+  
+  res <- try(suppressWarnings(RBtest::RBtest.iter(data, 5)$type.final), silent = TRUE) 
+  
+  if(inherits(res, "try-error")) res <- suppressWarnings(RBtest::RBtest(data)$type)
+  
+  noquote(ifelse(res == 0, "MCAR", ifelse(res == 1, "MAR", NA)))
+  
+}
