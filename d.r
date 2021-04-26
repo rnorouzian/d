@@ -1,4 +1,4 @@
-needxzc <- c("tidyverse", "survey", "sampling", "randomizr", "psych", "RBtest", "mice", "BiocManager", "DAKS","RBtest")
+needxzc <- c("tidyverse", "survey", "sampling", "randomizr", "psych", "RBtest", "mice", "BiocManager", "DAKS","RBtest","lattice")
 not.have <- needxzc[!(needxzc %in% installed.packages()[,"Package"])]
 if(length(not.have)) install.packages(not.have)
 
