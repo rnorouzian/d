@@ -30,9 +30,9 @@ penalty <- function(dayslate)
 
 pen.plot <- function(dayslate = 50){
   
-  curve(penalty(x), 0, dayslate, las = 1, tck = -0.03,
-        xaxt = "n", xlab = "Days Late", ylab = "Penalty", lwd = 2, mgp = c(2, .4, 0), cex.axis = .9)
-  axis(1, at = 0:max(dayslate), cex.axis = .6, mgp = c(2, .01, 0), tck = -0.03)
+  curve(penalty(x), 0, dayslate, las = 1, tck = -0.03, cex.axis = .6,
+        xaxt = "n", xlab = "Days Late", ylab = "Penalty", lwd = 2, mgp = c(1.5, .4, 0))
+  axis(1, at = 0:max(dayslate), cex.axis = .6, mgp = c(1, .01, 0), tck = -0.03)
 }
 
 #=================================================================================================================================
